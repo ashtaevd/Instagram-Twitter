@@ -75,6 +75,23 @@
 	         	$("#black").css('background-image', 'url("'+img+'")');
      		}); //closes black JSON
 
+
+     		// H    E    L    P   !!!
+			// var color = ["white", "red", "orange", "yellow", "green", "blue", "purple", "black"];
+
+			// for (i =0; i <color.length; i++){
+			// 	var backgroundPicture = color[i];
+
+
+			// 	$.getJSON('http://cooper-union-instagram-proxy.herokuapp.com/search/tag/color' + backgroundPicture + "", function(response){
+
+	  //         		var img = response[0].images.standard_resolution.url;
+
+	  //        		$("#" + backgroundPicture ).css('background-image', 'url("'+img+'")');
+   //   			}); //closes white JSON
+			// }
+
+
      		$("#white").mouseenter(function() {
 			$("#white").addClass("full")
 			$(".color").addClass("hidden")
@@ -163,6 +180,7 @@
 			$(".color").removeClass("hidden")
 			});
 
+
    //   		var color = ["white", "red", "orange", "yellow", "green", "blue", "purple", "black"];          H   E   L   P   !!!
 
    //   		for(var i=0; i<color.length; i++) {
@@ -171,16 +189,16 @@
 
    //   		var each = color[i];
 
-   //   		$("#"+each+"").mouseenter(function() {
+   			//$("#"+each+"").mouseenter(function() {
 			// $("#"+each+"").addClass("full")
+			// $(".color").removeClass("hidden")
+			// $("#"+each+").removeClass("hidden")
 			// });
 
 			// $("#"+each+"").mouseleave(function() {
 			// $("#"+each+"").removeClass("full")
+			// $(".color").removeClass("hidden")
 			// });
-
-			// $(".color").addClass("hidden");
-			// $("#"+each+"").removeClass("hidden");
 
 			// } // closes for loop
 
