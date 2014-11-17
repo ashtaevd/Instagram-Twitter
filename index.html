@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>&#1056;&#1072;&#1076;&#1091;&#1075;&#1072;</title>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script>
+
+		$(document).ready(function(){
+
+
+			$.getJSON("http://cooper-union-search-proxy.herokuapp.com/twitter/search/rainbow",function(response){
+
+					var rando = response.statuses[Math.floor(Math.random()*response.statuses.length)];
+					var status = rando.text;
+					// var names = rando.user.name;
+
+					// $(".div1").append("<h1>"+names+":</h1>");
+					$("#tweet").append("<h1>"+status+"</h1>");
+
+			});//closes JSON
+
+			$.getJSON('http://cooper-union-instagram-proxy.herokuapp.com/search/tag/colorwhite', function(response){
+
+	          	var img = response[0].images.standard_resolution.url;
+
+	         	$("#white").css('background-image', 'url("'+img+'")');
+     		}); //closes white JSON
+
+     		$.getJSON('http://cooper-union-instagram-proxy.herokuapp.com/search/tag/colorred', function(response){
+
+	          	var img = response[0].images.standard_resolution.url;
+
+	         	$("#red").css('background-image', 'url("'+img+'")');
+     		}); //closes red JSON
+
+     		$.getJSON('http://cooper-union-instagram-proxy.herokuapp.com/search/tag/colororange', function(response){
+
+	          	var img = response[0].images.standard_resolution.url;
+
+	         	$("#orange").css('background-image', 'url("'+img+'")');
+     		}); //closes orange JSON
+
+     		$.getJSON('http://cooper-union-instagram-proxy.herokuapp.com/search/tag/coloryellow', function(response){
+
+	          	var img = response[0].images.standard_resolution.url;
+
+	         	$("#yellow").css('background-image', 'url("'+img+'")');
+     		}); //closes yellow JSON
+
+     		$.getJSON('http://cooper-union-instagram-proxy.herokuapp.com/search/tag/colorgreen', function(response){
+
+	          	var img = response[0].images.standard_resolution.url;
+
+	         	$("#green").css('background-image', 'url("'+img+'")');
+     		}); //closes green JSON
+
+			$.getJSON('http://cooper-union-instagram-proxy.herokuapp.com/search/tag/colorblue', function(response){
+
+	          	var img = response[0].images.standard_resolution.url;
+
+	         	$("#blue").css('background-image', 'url("'+img+'")');
+     		}); //closes blue JSON
+
+     		$.getJSON('http://cooper-union-instagram-proxy.herokuapp.com/search/tag/colorpurple', function(response){
+
+	          	var img = response[0].images.standard_resolution.url;
+
+	         	$("#purple").css('background-image', 'url("'+img+'")');
+     		}); //closes purple JSON
+
+     		$.getJSON('http://cooper-union-instagram-proxy.herokuapp.com/search/tag/colorblack', function(response){
+
+	          	var img = response[0].images.standard_resolution.url;
+
+	         	$("#black").css('background-image', 'url("'+img+'")');
+     		}); //closes black JSON
+
+     		$("#white").mouseenter(function() {
+			$("#white").addClass("full")
+			});
+
+			$("#white").mouseleave(function() {
+			$("#white").removeClass("full")
+			});
+
+			$("#red").mouseenter(function() {
+			$("#red").addClass("full")
+			});
+
+			$("#red").mouseleave(function() {
+			$("#red").removeClass("full")
+			});
+
+			$("#orange").mouseenter(function() {
+			$("#orange").addClass("full")
+			});
+
+			$("#orange").mouseleave(function() {
+			$("#orange").removeClass("full")
+			});
+
+			$("#yellow").mouseenter(function() {
+			$("#yellow").addClass("full")
+			});
+
+			$("#yellow").mouseleave(function() {
+			$("#yellow").removeClass("full")
+			});
+
+			$("#green").mouseenter(function() {
+			$("#green").addClass("full")
+			});
+
+			$("#green").mouseleave(function() {
+			$("#green").removeClass("full")
+			});
+
+			$("#blue").mouseenter(function() {
+			$("#blue").addClass("full")
+			});
+
+			$("#blue").mouseleave(function() {
+			$("#blue").removeClass("full")
+			});
+
+			$("#purple").mouseenter(function() {
+			$("#purple").addClass("full")
+			});
+
+			$("#purple").mouseleave(function() {
+			$("#purple").removeClass("full")
+			});
+
+			$("#black").mouseenter(function() {
+			$("#black").addClass("full")
+			});
+
+			$("#black").mouseleave(function() {
+			$("#black").removeClass("full")
+			});
+
+   //   		var color = ["white", "red", "orange", "yellow", "green", "blue", "purple", "black"];          H   E   L   P   !!!
+
+   //   		for(var i=0; i<color.length; i++) {
+
+   //   		console.log(color[i]);
+
+   //   		var each = color[i];
+
+   //   		$("#"+each+"").mouseenter(function() {
+			// $("#"+each+"").addClass("full")
+			// });
+
+			// $("#"+each+"").mouseleave(function() {
+			// $("#"+each+"").removeClass("full")
+			// });
+
+			// $(".color").addClass("hidden");
+			// $("#"+each+"").removeClass("hidden");
+
+			// } // closes for loop
+
+    	}); //closes jQuery
+
+    	</script>
+		<style>
+
+		.color	{
+			float:left;
+			height: 800px;
+			width:11%;
+			margin-right: .7%;
+			margin-left: .8%;
+			margin-top:2%;
+			/*background-color:pink;*/
+			background-size:800px;
+			background-position: center;
+		}
+
+		.full {
+			width:800px;
+		}
+
+		section	{
+			width: 95%;
+			margin:auto;
+		}
+
+		#tweet	{
+			margin-top:350px;
+			color:#C0ADF0;
+			text-align: right;
+			/*color:#f3e2ff;*/
+			opacity: .5;
+			position:absolute;
+			width:70%;
+			margin-left: 15%;
+			text-align: right;
+/*			border: 1px solid black;*/
+		}
+
+		.hidden {
+			visibility: hidden;
+		}
+
+		</style>
+	<head>
+	<body>
+		<div id="tweet">
+			<h1></h1>
+		</div>
+		<section>
+			<div id="white" class="color"></div>
+			<div id="red" class="color"></div>
+			<div id="orange" class="color"></div>
+			<div id="yellow" class="color"></div>
+			<div id="green" class="color"></div>
+			<div id="blue" class="color"></div>
+			<div id="purple" class="color"></div>
+			<div id="black" class="color"></div>
+		</section>
+	</body>
+</html>
